@@ -8,27 +8,27 @@
 
 4.Here's how LSTMs work: 
 
-img-1
+![image](https://user-images.githubusercontent.com/48985829/140193295-f9c967b4-e802-4926-ab3e-d1e961c5d1b3.png)
 
     => Step-1: Decide how much of the past it should remember.
-       img-2
+       ![image](https://user-images.githubusercontent.com/48985829/140193341-c215ca70-0fc3-4892-b36e-1a565126e9c6.png)
 
     => Step-2: Decides how much this unit adds to the current state.
-       img-3
+       ![image](https://user-images.githubusercontent.com/48985829/140193385-0d395947-68c8-4eb1-994f-6014eda2cddc.png)
 
     => Step-3 Decide what part of the current cell state makes it to the output.
-       img-4
+       ![image](https://user-images.githubusercontent.com/48985829/140193433-33bfa908-3366-447c-930b-9401d68d6259.png)
 
 5.Seq to Seq model: 
 
-img-5
+![image](https://user-images.githubusercontent.com/48985829/140193510-7bba3e4e-adf4-453d-b3ee-e3a3cd557a54.png)
 
     => Encoder: No outputs because we are not making any predictions.
                 Only keep final state ht.
     => Decoder: the output of the encoder is given as an I/p to the decoder and subsequent chain is formed   
                 for the rest of the network.  
 
-        img-6
+        ![image](https://user-images.githubusercontent.com/48985829/140193578-8dceade4-6d78-4cd7-9ebe-b63d7affcc02.png)
 
 6.About the dataset that we used to train our machine: 
 
@@ -47,10 +47,10 @@ img-5
        repesentation so that words with same/similar meaning have a similar representation.     
     => Just an output for the word "ILL"
 
-    img-7
+    ![image](https://user-images.githubusercontent.com/48985829/140193635-8e0430f3-6227-42de-a4e7-d969aef587d3.png)
     
 9.Creating the model: 
-    => The first thing whici is done is to define our outputs.
+    => The first thing which is done is to define our outputs.
     => We create an empty output array.
     => To make predictions, the final layer of the model will be a dense layer.
     => Therefore I need one hot encoded vectors as outputs. Since we use softmax activation function at the 
